@@ -1,0 +1,19 @@
+name: Wide Log Lines
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate wide log lines
+        run: |
+          b='x'
+          for a in $(seq 20); do
+            b="$b$b"
+            echo "$a:$b"
+            echo
+          done
