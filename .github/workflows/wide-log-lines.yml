@@ -12,7 +12,7 @@ jobs:
       - name: Generate wide log lines
         run: |
           b='x'
-          for a in $(seq 20); do
+          for a in $(seq 13); do
             b="$b$b"
             echo "$a:$b"
             echo
